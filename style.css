@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightPink: hsl(275, 100%, 97%);
+  --grayishPurple: hsl(292, 16%, 49%);
+  --darkPurple: hsl(292, 42%, 14%);
+}
+body {
+  height: auto;
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--lightPink);
+}
+
+#header {
+  height: 40vh;
+  background: url(assets/images/background-pattern-mobile.svg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.faqs_container {
+  padding: 30px 12px;
+  position: absolute;
+  left: 50%;
+  top: 21%;
+  transform: translateX(-50%);
+  width: 300px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 0 40px var(--grayishPurple);
+}
+h1 {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--darkPurple);
+}
+.star_icon {
+  width: 25px;
+  margin-right: 20px;
+}
+.faq_content {
+  margin: 15px auto;
+}
+.faq_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.faq_head span {
+  font-size: 17px;
+  padding-right: 20px;
+  color: var(--darkPurple);
+  font-weight: 600;
+  transition: 0.1s;
+}
+.faq_head span:hover {
+  color: #af26f0;
+}
+.faq_body p {
+  display: none;
+  font-size: 14px;
+  text-align: left;
+  font-weight: 400;
+  padding-right: 5px;
+  color: var(--grayishPurple);
+  transition: 0.8s;
+}
+.imgs {
+  content: url("assets/images/icon-minus.svg");
+}
+.faq_body p.activeP {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  #header {
+    background: url(assets/images/background-pattern-desktop.svg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .faqs_container {
+    padding: 30px;
+    width: 640px;
+  }
+  .faq_head span {
+    font-size: 18px;
+  }
+  .faq_body p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .faqs_container {
+    top: 28%;
+  }
+}
